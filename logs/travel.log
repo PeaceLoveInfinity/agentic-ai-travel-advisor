@@ -1,0 +1,5 @@
+INFO:config.logger:Travel Advisor Started
+2026-06-09 22:51:38,439 - INFO - Travel Advisor Started
+2026-06-10 10:24:51,316 - INFO - Question: plan a goa trip for 5 days
+2026-06-10 10:24:54,318 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 10:24:54,338 - INFO - Response generated
