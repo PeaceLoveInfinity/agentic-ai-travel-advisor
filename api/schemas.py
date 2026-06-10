@@ -14,3 +14,9 @@ class BudgetRequest(BaseModel):
     budget: int
 
     duration: int
+
+class HotelRequest(BaseModel):
+
+    destination: str
+
+    budget: int

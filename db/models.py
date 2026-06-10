@@ -37,9 +37,11 @@ class Trip(Base):
 
     budget = Column(Integer)
 
+    duration = Column(Integer)
+
     budget_report = Column(Text)
 
-    duration = Column(Integer)
+    hotel_report = Column(Text)
 
 class Conversation(Base):
 

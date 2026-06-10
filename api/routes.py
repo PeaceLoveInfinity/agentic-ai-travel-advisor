@@ -5,12 +5,15 @@ from agents.research_agent import (research_destination)
 from api.schemas import ResearchRequest
 from agents.budget_agent import (generate_budget)
 from api.schemas import BudgetRequest
+from agents.hotel_agent import (recommend_hotels)
+from api.schemas import HotelRequest
 
 router = APIRouter()
 
 @router.get("/")
 def health():
     return {"status": "running"}
+
 
 @router.post("/ask")
 def ask_ai(payload: AskRequest):
@@ -22,6 +25,7 @@ def ask_ai(payload: AskRequest):
     return {
         "answer": answer
     }
+
 
 @router.post("/research")
 
@@ -35,6 +39,7 @@ def research(payload: ResearchRequest):
         "report": report
     }
 
+
 @router.post("/budget")
 
 def budget(payload: BudgetRequest):
@@ -47,4 +52,18 @@ def budget(payload: BudgetRequest):
 
     return {
         "budget_report": report
+    }
+
+
+@router.post("/hotels")
+
+def hotels(payload: HotelRequest):
+
+    report = recommend_hotels(
+        destination=payload.destination,
+        budget=payload.budget
+    )
+
+    return {
+        "hotel_report": report
     }

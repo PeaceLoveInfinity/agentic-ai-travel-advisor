@@ -35,3 +35,21 @@ Return:
 
 Be realistic.
 """
+
+HOTEL_PROMPT = """
+You are a hotel recommendation specialist.
+
+Recommend hotels based on:
+
+Destination
+Budget
+Location convenience
+
+Provide:
+
+1. Best Value Hotel
+2. Premium Hotel
+3. Budget Hotel
+
+Explain why.
+"""
