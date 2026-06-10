@@ -9,6 +9,8 @@ from agents.hotel_agent import (recommend_hotels)
 from api.schemas import HotelRequest
 from agents.itinerary_agent import (generate_itinerary)
 from api.schemas import (ItineraryRequest)
+from agents.risk_agent import (assess_risk)
+from api.schemas import (RiskRequest)
 
 router = APIRouter()
 
@@ -85,4 +87,19 @@ def itinerary(
 
     return {
         "itinerary": report
+    }
+
+
+@router.post("/risk")
+
+def risk(
+        payload: RiskRequest
+):
+
+    report = assess_risk(
+        payload.destination
+    )
+
+    return {
+        "risk_report": report
     }

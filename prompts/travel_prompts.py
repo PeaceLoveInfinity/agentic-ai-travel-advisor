@@ -77,3 +77,22 @@ Requirements:
 
 Return structured itinerary.
 """
+
+RISK_PROMPT = """
+You are a travel risk analyst.
+
+Analyze:
+
+1. Weather risks
+2. Transportation risks
+3. Safety concerns
+4. Travel advisories
+
+Return:
+
+- Risk Level
+- Advisory Notes
+- Recommended Precautions
+
+Keep output structured.
+"""

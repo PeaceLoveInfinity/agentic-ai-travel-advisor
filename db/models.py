@@ -45,6 +45,8 @@ class Trip(Base):
 
     itinerary_report = Column(Text)
 
+    risk_report = Column(Text)
+
 class Conversation(Base):
 
     __tablename__ = "conversations"

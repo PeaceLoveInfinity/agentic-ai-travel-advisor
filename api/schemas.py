@@ -28,3 +28,7 @@ class ItineraryRequest(BaseModel):
     duration: int
 
     budget: int
+
+class RiskRequest(BaseModel):
+
+    destination: str
