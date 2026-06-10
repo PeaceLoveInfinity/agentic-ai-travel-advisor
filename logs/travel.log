@@ -3,3 +3,7 @@ INFO:config.logger:Travel Advisor Started
 2026-06-10 10:24:51,316 - INFO - Question: plan a goa trip for 5 days
 2026-06-10 10:24:54,318 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-06-10 10:24:54,338 - INFO - Response generated
+2026-06-10 10:57:01,490 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 11:06:21,549 - INFO - Researching goa
+2026-06-10 11:06:24,715 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 11:06:24,735 - INFO - Research completed

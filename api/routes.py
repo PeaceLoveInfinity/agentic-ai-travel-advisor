@@ -1,6 +1,8 @@
 from fastapi import APIRouter
 from api.schemas import AskRequest
+from api.schemas import ResearchRequest
 from services.travel_ai import ask_travel_ai
+from agents.research_agent import (research_destination)
 
 router = APIRouter()
 
@@ -17,4 +19,16 @@ def ask_ai(payload: AskRequest):
 
     return {
         "answer": answer
+    }
+
+@router.post("/research")
+
+def research(payload: ResearchRequest):
+
+    report = research_destination(
+        payload.destination
+    )
+
+    return {
+        "report": report
     }

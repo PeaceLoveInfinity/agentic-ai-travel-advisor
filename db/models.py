@@ -37,3 +37,17 @@ class Trip(Base):
     budget = Column(Integer)
 
     duration = Column(Integer)
+
+class Conversation(Base):
+
+    __tablename__ = "conversations"
+
+    id = Column(
+        Integer,
+        primary_key=True,
+        index=True
+    )
+
+    user_message = Column(String)
+
+    ai_response = Column(String)
