@@ -6,3 +6,11 @@ class AskRequest(BaseModel):
 
 class ResearchRequest(BaseModel):
     destination: str
+
+class BudgetRequest(BaseModel):
+
+    destination: str
+
+    budget: int
+
+    duration: int

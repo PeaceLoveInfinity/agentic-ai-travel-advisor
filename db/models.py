@@ -1,6 +1,7 @@
 from sqlalchemy import Column
 from sqlalchemy import Integer
 from sqlalchemy import String
+from sqlalchemy import Text
 
 from db.database import Base
 
@@ -35,6 +36,8 @@ class Trip(Base):
     destination = Column(String)
 
     budget = Column(Integer)
+
+    budget_report = Column(Text)
 
     duration = Column(Integer)
 

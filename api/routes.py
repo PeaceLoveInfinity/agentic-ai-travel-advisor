@@ -1,8 +1,10 @@
 from fastapi import APIRouter
-from api.schemas import AskRequest
-from api.schemas import ResearchRequest
 from services.travel_ai import ask_travel_ai
+from api.schemas import AskRequest
 from agents.research_agent import (research_destination)
+from api.schemas import ResearchRequest
+from agents.budget_agent import (generate_budget)
+from api.schemas import BudgetRequest
 
 router = APIRouter()
 
@@ -31,4 +33,18 @@ def research(payload: ResearchRequest):
 
     return {
         "report": report
+    }
+
+@router.post("/budget")
+
+def budget(payload: BudgetRequest):
+
+    report = generate_budget(
+        destination=payload.destination,
+        budget=payload.budget,
+        duration=payload.duration
+    )
+
+    return {
+        "budget_report": report
     }

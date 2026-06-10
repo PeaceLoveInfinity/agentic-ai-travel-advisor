@@ -7,3 +7,9 @@ INFO:config.logger:Travel Advisor Started
 2026-06-10 11:06:21,549 - INFO - Researching goa
 2026-06-10 11:06:24,715 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-06-10 11:06:24,735 - INFO - Research completed
+2026-06-10 22:41:12,430 - INFO - Budget calculation for Goa
+2026-06-10 22:41:15,657 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 22:41:15,682 - INFO - Budget generated
+2026-06-10 22:49:55,912 - INFO - Budget calculation for Mumbai
+2026-06-10 22:49:57,819 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 22:49:57,834 - INFO - Budget generated
