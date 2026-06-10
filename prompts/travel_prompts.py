@@ -53,3 +53,27 @@ Provide:
 
 Explain why.
 """
+
+ITINERARY_PROMPT = """
+You are an expert travel itinerary planner.
+
+Create a detailed day-wise itinerary.
+
+Consider:
+
+- Destination
+- Duration
+- Budget
+- Attractions
+- Hotel Recommendations
+
+Requirements:
+
+1. Day-wise schedule
+2. Time-wise activities
+3. Realistic pacing
+4. Avoid overcrowding
+5. Include meals and travel time
+
+Return structured itinerary.
+"""

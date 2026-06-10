@@ -19,3 +19,27 @@ INFO:config.logger:Travel Advisor Started
 2026-06-10 23:15:05,724 - INFO - Finding hotels for goa
 2026-06-10 23:15:08,559 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-06-10 23:15:08,572 - INFO - Hotel recommendation completed
+2026-06-10 23:29:08,903 - INFO - Creating itinerary for Goa
+2026-06-10 23:29:08,903 - INFO - Researching Goa
+2026-06-10 23:29:13,327 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 23:29:13,343 - INFO - Research completed
+2026-06-10 23:29:13,343 - INFO - Budget calculation for Goa
+2026-06-10 23:29:14,953 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 23:29:14,954 - INFO - Budget generated
+2026-06-10 23:29:14,954 - INFO - Finding hotels for Goa
+2026-06-10 23:29:16,885 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 23:29:16,886 - INFO - Hotel recommendation completed
+2026-06-10 23:29:19,559 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 23:29:19,559 - INFO - Itinerary created
+2026-06-10 23:37:39,112 - INFO - Creating itinerary for goa
+2026-06-10 23:37:39,114 - INFO - Researching goa
+2026-06-10 23:37:42,485 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 23:37:42,493 - INFO - Research completed
+2026-06-10 23:37:42,493 - INFO - Budget calculation for goa
+2026-06-10 23:37:45,191 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 23:37:45,191 - INFO - Budget generated
+2026-06-10 23:37:45,191 - INFO - Finding hotels for goa
+2026-06-10 23:37:46,613 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 23:37:46,613 - INFO - Hotel recommendation completed
+2026-06-10 23:37:49,611 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-10 23:37:49,611 - INFO - Itinerary created

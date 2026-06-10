@@ -7,6 +7,8 @@ from agents.budget_agent import (generate_budget)
 from api.schemas import BudgetRequest
 from agents.hotel_agent import (recommend_hotels)
 from api.schemas import HotelRequest
+from agents.itinerary_agent import (generate_itinerary)
+from api.schemas import (ItineraryRequest)
 
 router = APIRouter()
 
@@ -66,4 +68,21 @@ def hotels(payload: HotelRequest):
 
     return {
         "hotel_report": report
+    }
+
+
+@router.post("/itinerary")
+
+def itinerary(
+        payload: ItineraryRequest
+):
+
+    report = generate_itinerary(
+        destination=payload.destination,
+        duration=payload.duration,
+        budget=payload.budget
+    )
+
+    return {
+        "itinerary": report
     }

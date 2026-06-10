@@ -20,3 +20,11 @@ class HotelRequest(BaseModel):
     destination: str
 
     budget: int
+
+class ItineraryRequest(BaseModel):
+
+    destination: str
+
+    duration: int
+
+    budget: int

@@ -43,6 +43,8 @@ class Trip(Base):
 
     hotel_report = Column(Text)
 
+    itinerary_report = Column(Text)
+
 class Conversation(Base):
 
     __tablename__ = "conversations"
