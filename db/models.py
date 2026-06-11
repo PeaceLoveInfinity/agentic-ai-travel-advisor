@@ -39,6 +39,8 @@ class Trip(Base):
 
     duration = Column(Integer)
 
+    research_report = Column(Text)
+
     budget_report = Column(Text)
 
     hotel_report = Column(Text)
@@ -62,3 +64,5 @@ class Conversation(Base):
     user_message = Column(String)
 
     ai_response = Column(String)
+
+    thread_id = Column(String)

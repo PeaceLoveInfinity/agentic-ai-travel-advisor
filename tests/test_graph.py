@@ -3,16 +3,20 @@ from graph.workflow import (
 )
 
 state = {
-
     "destination": "Goa",
-
     "budget": 50000,
-
     "duration": 5
 }
 
+config = {
+    "configurable": {
+        "thread_id": "user_002"
+    }
+}
+
 result = travel_graph.invoke(
-    state
+    state,
+    config=config
 )
 
 print(

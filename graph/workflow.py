@@ -16,6 +16,8 @@ from graph.nodes import (
     risk_node,
     supervisor_node
 )
+# Importing the checkpoint manager to handle memory checkpoints in the workflow
+from memory.checkpoint_manager import (checkpointer)
 
 # Creating the graph builder instance
 
@@ -91,5 +93,5 @@ builder.add_edge(
     END
 )
 
-# Compiling the graph to create an executable workflow
-travel_graph = builder.compile()
+# Compiling the graph with the checkpointer to enable memory management and checkpointing during the workflow execution
+travel_graph = builder.compile(checkpointer=checkpointer)
