@@ -20,3 +20,5 @@ class TravelState(TypedDict):
     risk_report: str
 
     final_package: str
+
+    approval_status: str

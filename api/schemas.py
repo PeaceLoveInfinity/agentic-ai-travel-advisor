@@ -42,3 +42,11 @@ class TravelPackageRequest(
     duration: int
 
     budget: int
+
+class ApprovalRequest(
+    BaseModel
+):
+
+    thread_id: str
+
+    decision: str

@@ -242,3 +242,22 @@ Upcoming:
 - Docker
 - CI/CD
 - Production Deployment
+
+## Memory Layer
+
+Current:
+
+- LangGraph MemorySaver
+- Thread-Based Sessions
+
+Capabilities:
+
+- Workflow Checkpointing
+- Session Isolation
+- State Persistence (Runtime)
+
+Planned:
+
+- PostgreSQL Persistence
+- Long-Term User Memory
+- Conversation Recall
