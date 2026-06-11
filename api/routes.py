@@ -13,14 +13,17 @@ from agents.risk_agent import (assess_risk)
 from api.schemas import (RiskRequest)
 from agents.supervisor_agent import (create_travel_package)
 from api.schemas import (TravelPackageRequest)
+from graph.workflow import (travel_graph)
 
+# Initializing the API router
 router = APIRouter()
 
+# Health check endpoint to verify that the API is running
 @router.get("/")
 def health():
     return {"status": "running"}
 
-
+# This endpoint allows users to ask a question to the travel AI and get an answer
 @router.post("/ask")
 def ask_ai(payload: AskRequest):
 
@@ -32,7 +35,7 @@ def ask_ai(payload: AskRequest):
         "answer": answer
     }
 
-
+# This endpoint will perform research on a travel destination and return a report
 @router.post("/research")
 
 def research(payload: ResearchRequest):
@@ -45,7 +48,7 @@ def research(payload: ResearchRequest):
         "report": report
     }
 
-
+# This endpoint will generate a budget report based on the destination, budget, and duration
 @router.post("/budget")
 
 def budget(payload: BudgetRequest):
@@ -60,7 +63,7 @@ def budget(payload: BudgetRequest):
         "budget_report": report
     }
 
-
+# This endpoint will recommend hotels based on the destination and budget
 @router.post("/hotels")
 
 def hotels(payload: HotelRequest):
@@ -74,7 +77,7 @@ def hotels(payload: HotelRequest):
         "hotel_report": report
     }
 
-
+# This endpoint will generate an itinerary based on the destination, duration, and budget
 @router.post("/itinerary")
 
 def itinerary(
@@ -91,7 +94,7 @@ def itinerary(
         "itinerary": report
     }
 
-
+# This endpoint will assess the risk of traveling to a destination
 @router.post("/risk")
 
 def risk(
@@ -106,7 +109,7 @@ def risk(
         "risk_report": report
     }
 
-
+# This endpoint will execute the entire supervisor agent workflow for creating a travel package
 @router.post("/travel-package")
 
 def travel_package(
@@ -121,4 +124,30 @@ def travel_package(
 
     return {
         "travel_package": report
+    }
+
+# This endpoint will execute the entire graph workflow for creating a travel package
+@router.post("/graph-travel")
+
+def graph_travel(
+        payload: TravelPackageRequest
+):
+
+    result = travel_graph.invoke(
+        {
+
+            "destination":
+            payload.destination,
+
+            "budget":
+            payload.budget,
+
+            "duration":
+            payload.duration
+        }
+    )
+
+    return {
+        "travel_package":
+        result["final_package"]
     }

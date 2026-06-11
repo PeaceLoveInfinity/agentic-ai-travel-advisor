@@ -147,3 +147,129 @@ INFO:config.logger:Travel Advisor Started
 2026-06-11 10:23:54,788 - INFO - Risk assessment completed
 2026-06-11 10:23:56,736 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2026-06-11 10:23:56,736 - INFO - Travel package created
+2026-06-11 11:40:14,278 - INFO - Researching Goa
+2026-06-11 11:40:17,859 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:17,891 - INFO - Research completed
+2026-06-11 11:40:17,891 - INFO - Budget calculation for Goa
+2026-06-11 11:40:19,662 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:19,669 - INFO - Budget generated
+2026-06-11 11:40:19,670 - INFO - Finding hotels for Goa
+2026-06-11 11:40:22,727 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:22,727 - INFO - Hotel recommendation completed
+2026-06-11 11:40:22,727 - INFO - Creating itinerary for Goa
+2026-06-11 11:40:22,727 - INFO - Calling Research Agent
+2026-06-11 11:40:22,727 - INFO - Researching Goa
+2026-06-11 11:40:24,869 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:24,885 - INFO - Research completed
+2026-06-11 11:40:24,885 - INFO - Calling Budget Agent
+2026-06-11 11:40:24,885 - INFO - Budget calculation for Goa
+2026-06-11 11:40:28,779 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:28,779 - INFO - Budget generated
+2026-06-11 11:40:28,779 - INFO - Calling Hotel Agent
+2026-06-11 11:40:28,779 - INFO - Finding hotels for Goa
+2026-06-11 11:40:31,208 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:31,208 - INFO - Hotel recommendation completed
+2026-06-11 11:40:33,954 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:33,961 - INFO - Itinerary created
+2026-06-11 11:40:33,961 - INFO - Assessing risks for Goa
+2026-06-11 11:40:38,194 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:38,194 - INFO - Risk assessment completed
+2026-06-11 11:40:38,194 - INFO - Supervisor started for Goa
+2026-06-11 11:40:38,194 - INFO - Calling Research Agent
+2026-06-11 11:40:38,194 - INFO - Researching Goa
+2026-06-11 11:40:40,756 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:40,756 - INFO - Research completed
+2026-06-11 11:40:40,756 - INFO - Calling Budget Agent
+2026-06-11 11:40:40,756 - INFO - Budget calculation for Goa
+2026-06-11 11:40:43,310 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:43,318 - INFO - Budget generated
+2026-06-11 11:40:43,320 - INFO - Calling Hotel Agent
+2026-06-11 11:40:43,320 - INFO - Finding hotels for Goa
+2026-06-11 11:40:45,771 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:45,771 - INFO - Hotel recommendation completed
+2026-06-11 11:40:45,771 - INFO - Calling Itinerary Agent
+2026-06-11 11:40:45,771 - INFO - Creating itinerary for Goa
+2026-06-11 11:40:45,771 - INFO - Calling Research Agent
+2026-06-11 11:40:45,771 - INFO - Researching Goa
+2026-06-11 11:40:48,480 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:48,481 - INFO - Research completed
+2026-06-11 11:40:48,485 - INFO - Calling Budget Agent
+2026-06-11 11:40:48,485 - INFO - Budget calculation for Goa
+2026-06-11 11:40:50,369 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:50,384 - INFO - Budget generated
+2026-06-11 11:40:50,384 - INFO - Calling Hotel Agent
+2026-06-11 11:40:50,384 - INFO - Finding hotels for Goa
+2026-06-11 11:40:52,630 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:52,639 - INFO - Hotel recommendation completed
+2026-06-11 11:40:56,004 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:40:56,017 - INFO - Itinerary created
+2026-06-11 11:40:56,017 - INFO - Calling Risk Agent
+2026-06-11 11:40:56,017 - INFO - Assessing risks for Goa
+2026-06-11 11:41:01,035 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:41:01,035 - INFO - Risk assessment completed
+2026-06-11 11:41:01,636 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-11 11:41:01,636 - INFO - Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-06-11 11:41:07,699 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:41:07,699 - INFO - Travel package created
+2026-06-11 11:51:59,611 - INFO - Researching goa
+2026-06-11 11:52:03,899 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:03,940 - INFO - Research completed
+2026-06-11 11:52:03,942 - INFO - Budget calculation for goa
+2026-06-11 11:52:05,696 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:05,696 - INFO - Budget generated
+2026-06-11 11:52:05,703 - INFO - Finding hotels for goa
+2026-06-11 11:52:14,413 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:14,416 - INFO - Hotel recommendation completed
+2026-06-11 11:52:14,419 - INFO - Creating itinerary for goa
+2026-06-11 11:52:14,419 - INFO - Calling Research Agent
+2026-06-11 11:52:14,419 - INFO - Researching goa
+2026-06-11 11:52:18,809 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:18,810 - INFO - Research completed
+2026-06-11 11:52:18,810 - INFO - Calling Budget Agent
+2026-06-11 11:52:18,810 - INFO - Budget calculation for goa
+2026-06-11 11:52:21,145 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:21,145 - INFO - Budget generated
+2026-06-11 11:52:21,145 - INFO - Calling Hotel Agent
+2026-06-11 11:52:21,145 - INFO - Finding hotels for goa
+2026-06-11 11:52:25,051 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:25,054 - INFO - Hotel recommendation completed
+2026-06-11 11:52:29,144 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:29,144 - INFO - Itinerary created
+2026-06-11 11:52:29,151 - INFO - Assessing risks for goa
+2026-06-11 11:52:35,283 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:35,283 - INFO - Risk assessment completed
+2026-06-11 11:52:35,283 - INFO - Supervisor started for goa
+2026-06-11 11:52:35,290 - INFO - Calling Research Agent
+2026-06-11 11:52:35,290 - INFO - Researching goa
+2026-06-11 11:52:37,309 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:37,309 - INFO - Research completed
+2026-06-11 11:52:37,309 - INFO - Calling Budget Agent
+2026-06-11 11:52:37,309 - INFO - Budget calculation for goa
+2026-06-11 11:52:44,801 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:44,801 - INFO - Budget generated
+2026-06-11 11:52:44,801 - INFO - Calling Hotel Agent
+2026-06-11 11:52:44,801 - INFO - Finding hotels for goa
+2026-06-11 11:52:55,762 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:52:55,762 - INFO - Hotel recommendation completed
+2026-06-11 11:52:55,762 - INFO - Calling Itinerary Agent
+2026-06-11 11:52:55,762 - INFO - Creating itinerary for goa
+2026-06-11 11:52:55,762 - INFO - Calling Research Agent
+2026-06-11 11:52:55,762 - INFO - Researching goa
+2026-06-11 11:53:03,656 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:53:03,656 - INFO - Research completed
+2026-06-11 11:53:03,656 - INFO - Calling Budget Agent
+2026-06-11 11:53:03,656 - INFO - Budget calculation for goa
+2026-06-11 11:53:09,311 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:53:09,311 - INFO - Budget generated
+2026-06-11 11:53:09,311 - INFO - Calling Hotel Agent
+2026-06-11 11:53:09,311 - INFO - Finding hotels for goa
+2026-06-11 11:53:18,496 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:53:18,503 - INFO - Hotel recommendation completed
+2026-06-11 11:53:25,152 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:53:25,152 - INFO - Itinerary created
+2026-06-11 11:53:25,152 - INFO - Calling Risk Agent
+2026-06-11 11:53:25,152 - INFO - Assessing risks for goa
+2026-06-11 11:53:36,974 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:53:36,974 - INFO - Risk assessment completed
+2026-06-11 11:53:39,367 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-11 11:53:39,367 - INFO - Travel package created
