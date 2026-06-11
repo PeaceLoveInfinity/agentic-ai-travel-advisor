@@ -3,7 +3,7 @@ def request_approval():
     while True:
 
         decision = input(
-            "\nApprove Travel Plan? (yes/no): "
+            "Auto-approved by n8n workflow"
         )
 
         if decision.lower() in [

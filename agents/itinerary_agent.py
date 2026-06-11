@@ -10,6 +10,48 @@ from config.logger import logger
 llm = get_model()
 
 
+# ==========================
+# OLD API ENDPOINT FUNCTION
+# ==========================
+
+def generate_itinerary(
+        destination,
+        duration,
+        budget
+):
+
+    logger.info(
+        f"Generating itinerary for {destination}"
+    )
+
+    prompt = f"""
+    {ITINERARY_PROMPT}
+
+    Destination:
+    {destination}
+
+    Duration:
+    {duration}
+
+    Budget:
+    {budget}
+    """
+
+    response = llm.invoke(
+        prompt
+    )
+
+    logger.info(
+        "Itinerary generated successfully"
+    )
+
+    return response.content
+
+
+# ==========================
+# LANGGRAPH FUNCTION
+# ==========================
+
 def generate_itinerary_from_state(
         state
 ):

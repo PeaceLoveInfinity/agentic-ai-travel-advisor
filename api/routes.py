@@ -133,9 +133,14 @@ def graph_travel(
         payload: TravelPackageRequest
 ):
 
+    config = {
+        "configurable": {
+            "thread_id": "api_user_001"
+        }
+    }
+
     result = travel_graph.invoke(
         {
-
             "destination":
             payload.destination,
 
@@ -144,7 +149,8 @@ def graph_travel(
 
             "duration":
             payload.duration
-        }
+        },
+        config=config
     )
 
     return {
