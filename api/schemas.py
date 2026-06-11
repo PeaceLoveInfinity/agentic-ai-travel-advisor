@@ -32,3 +32,13 @@ class ItineraryRequest(BaseModel):
 class RiskRequest(BaseModel):
 
     destination: str
+
+class TravelPackageRequest(
+    BaseModel
+):
+
+    destination: str
+
+    duration: int
+
+    budget: int

@@ -11,6 +11,8 @@ from agents.itinerary_agent import (generate_itinerary)
 from api.schemas import (ItineraryRequest)
 from agents.risk_agent import (assess_risk)
 from api.schemas import (RiskRequest)
+from agents.supervisor_agent import (create_travel_package)
+from api.schemas import (TravelPackageRequest)
 
 router = APIRouter()
 
@@ -102,4 +104,21 @@ def risk(
 
     return {
         "risk_report": report
+    }
+
+
+@router.post("/travel-package")
+
+def travel_package(
+        payload: TravelPackageRequest
+):
+
+    report = create_travel_package(
+        destination=payload.destination,
+        duration=payload.duration,
+        budget=payload.budget
+    )
+
+    return {
+        "travel_package": report
     }

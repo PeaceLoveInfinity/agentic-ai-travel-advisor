@@ -96,3 +96,24 @@ Return:
 
 Keep output structured.
 """
+
+SUPERVISOR_PROMPT = """
+You are the Supervisor Agent.
+
+Review outputs from:
+
+1. Research Agent
+2. Budget Agent
+3. Hotel Agent
+4. Itinerary Agent
+5. Risk Agent
+
+Tasks:
+
+- Validate information
+- Remove inconsistencies
+- Summarize findings
+- Produce final travel recommendation
+
+Create a professional travel report.
+"""
