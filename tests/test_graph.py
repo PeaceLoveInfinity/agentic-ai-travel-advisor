@@ -19,6 +19,4 @@ result = travel_graph.invoke(
     config=config
 )
 
-print(
-    result["final_package"]
-)
+print(result)

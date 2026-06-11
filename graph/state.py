@@ -22,3 +22,4 @@ class TravelState(TypedDict):
     final_package: str
 
     approval_status: str
+   

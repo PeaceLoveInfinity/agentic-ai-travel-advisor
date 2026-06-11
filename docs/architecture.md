@@ -282,3 +282,27 @@ Planned:
 - React UI Approval
 - n8n Approval Workflows
 - Email Approval Links
+
+## LangGraph Optimization Layer
+
+Implemented:
+
+- Shared State Propagation
+- State-Driven Nodes
+- Travel Package Builder
+
+Optimizations:
+
+- Duplicate Agent Calls Removed
+- Reduced Groq Token Usage
+- Reduced Workflow Latency
+
+Architecture Pattern:
+
+Node
+↓
+Update State
+↓
+Next Node
+↓
+Read State

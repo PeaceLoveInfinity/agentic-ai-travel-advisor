@@ -25,7 +25,10 @@ from services.travel_package_builder import (
 )
 
 import logging
-from human_loop.approval_manager import (request_approval)
+
+from human_loop.approval_manager import (
+    request_approval
+)
 
 logger = logging.getLogger(__name__)
 
