@@ -2,18 +2,21 @@
 
 ## Overview
 
-Phase 13 introduces human approval into the travel planning workflow.
+Phase 13 introduces Human-in-the-Loop (HITL) capabilities into the Autonomous AI Travel Advisor.
 
-Instead of immediately completing execution after generating a travel package, the system now pauses and requests user approval.
+Prior to this phase, the LangGraph workflow executed autonomously from start to finish.
+
+This phase adds user approval before finalizing travel recommendations.
 
 ---
 
 ## Objectives
 
-- Add human oversight
-- Prevent fully autonomous execution
+- Introduce human oversight
 - Enable user validation
-- Support workflow resubmission
+- Prevent fully autonomous execution
+- Support approval-based workflows
+- Prepare for enterprise governance
 
 ---
 
@@ -23,27 +26,27 @@ START
 
 ↓
 
-Research
+Research Agent
 
 ↓
 
-Budget
+Budget Agent
 
 ↓
 
-Hotel
+Hotel Agent
 
 ↓
 
-Itinerary
+Itinerary Agent
 
 ↓
 
-Risk
+Risk Agent
 
 ↓
 
-Supervisor
+Supervisor Agent
 
 ↓
 
@@ -57,67 +60,196 @@ User Decision
 
 Approve?
 
-├── Yes → END
+├── YES → END
 
-└── No → Regenerate
+└── NO → Regenerate Workflow
 
 ---
 
-## Components
+## Components Implemented
 
 ### Approval Manager
 
+File:
+
+```text
+human_loop/approval_manager.py
+```
+
 Responsibilities:
 
-- Capture user decision
-- Validate input
+- Capture user approval
+- Validate decision input
+- Return workflow action
 
 ---
 
 ### Approval Node
 
-Responsibilities:
+File:
 
-- Pause workflow
-- Request approval
-- Store decision
-
----
-
-### Conditional Routing
-
-LangGraph conditional edges determine:
-
-- Approved path
-- Rejected path
-
----
-
-## State Updates
-
-Added:
-
-```python
-approval_status
+```text
+graph/nodes.py
 ```
 
-to TravelState.
+Responsibilities:
+
+- Pause execution
+- Request approval
+- Update workflow state
+
+---
+
+### Approval State
+
+Added to TravelState:
+
+```python
+approval_status: str
+```
+
+Purpose:
+
+Store user decision inside the graph state.
+
+---
+
+## Conditional Routing
+
+Implemented using:
+
+```python
+builder.add_conditional_edges()
+```
+
+Routing Logic:
+
+### Approved
+
+```text
+Approval Node
+      ↓
+END
+```
+
+### Rejected
+
+```text
+Approval Node
+      ↓
+Supervisor Agent
+      ↓
+Approval Node
+```
 
 ---
 
 ## Benefits
 
 - Human oversight
-- Safer AI workflows
-- Better decision quality
-- Enterprise readiness
+- Increased reliability
+- User-controlled execution
+- Enterprise AI governance
+- Reduced automation risks
+
+---
+
+## Logging
+
+Approval decisions are logged:
+
+```python
+logger.info(
+    f"Approval Decision: {decision}"
+)
+```
+
+---
+
+## Validation
+
+Tested Scenarios:
+
+### Approval Path
+
+Input:
+
+```text
+yes
+```
+
+Output:
+
+Workflow completed successfully.
+
+---
+
+### Rejection Path
+
+Input:
+
+```text
+no
+```
+
+Output:
+
+Workflow regenerated.
+
+---
+
+## Architecture Impact
+
+Before:
+
+User
+
+↓
+
+LangGraph
+
+↓
+
+END
+
+After:
+
+User
+
+↓
+
+LangGraph
+
+↓
+
+Approval Node
+
+↓
+
+Decision
+
+↓
+
+Conditional Routing
+
+↓
+
+END
 
 ---
 
 ## Future Enhancements
 
-- Web-based approvals
-- Email approvals
-- Slack approvals
+- LangGraph Interrupts
+- API-based approvals
+- React approval interface
 - n8n approval workflows
-- Multi-level approvals
+- Email approval links
+- Slack approvals
+- Multi-level approval chains
+
+---
+
+## Outcome
+
+The system now supports Human-in-the-Loop workflows, enabling users to review and approve AI-generated travel recommendations before completion.

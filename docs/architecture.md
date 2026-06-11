@@ -261,3 +261,24 @@ Planned:
 - PostgreSQL Persistence
 - Long-Term User Memory
 - Conversation Recall
+
+## Human-in-the-Loop Layer
+
+Implemented:
+
+- Approval Manager
+- Approval Node
+- Conditional Routing
+
+Capabilities:
+
+- User Validation
+- Workflow Control
+- Approval-Based Execution
+
+Planned:
+
+- LangGraph Interrupts
+- React UI Approval
+- n8n Approval Workflows
+- Email Approval Links
